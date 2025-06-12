@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="turtlebot3_lidar_tracker" type="wall_motion_detector.py" name="wall_motion_detector" output="screen">
+    <param name="fov_deg" value="2.5" />
+    <param name="stable_threshold" value="0.03" />
+    <param name="marker_z" value="1.0" />
+  </node>
+</launch>

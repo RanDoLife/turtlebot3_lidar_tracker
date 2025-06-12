@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Стена -->
+    <model name="wall">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 5.0 2.0</size>
+            </box>
+          </geometry>
+          <pose>0 0 1 0 0 0</pose>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 5.0 2.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+          <pose>0 0 1 0 0 0</pose>
+        </visual>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+    </model>
+
+  </world>
+</sdf>
